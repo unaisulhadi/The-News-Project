@@ -47,6 +47,10 @@ class HeadlineAdapter(
         }
 
         Glide.with(context).load(item.urlToImage).into(holder.image)
+
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(list[position])
+        }
     }
 
     class HeadlineViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

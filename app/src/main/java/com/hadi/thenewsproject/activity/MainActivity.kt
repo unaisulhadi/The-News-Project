@@ -105,28 +105,6 @@ class MainActivity : AppCompatActivity(), HeadlineAdapter.OnItemClickListener,
     }
 
     override fun onItemClick(item: ArticlesItem) {
-//        val intent = Intent(this,NewsViewActivity::class.java)
-//        intent.putExtra("NEWS_URL",item.url)
-//        startActivity(intent)
-
-
-        //Toast.makeText(this, item.content, Toast.LENGTH_SHORT).show();
-
-/*
-
-        val intent = Intent(this, CustomTabsBroadcastReceiver::class.java)
-
-        val label = "Copy link"
-        val pendingIntent =
-            PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
-1
-        val customTabsIntent = CustomTabsIntent.Builder()
-            .addMenuItem(label, pendingIntent)
-            .build()
-
-        customTabsIntent.launchUrl(this, Uri.parse("http://www.google.it"))
-*/
-
 
 
         val builder = CustomTabsIntent.Builder()
@@ -141,17 +119,6 @@ class MainActivity : AppCompatActivity(), HeadlineAdapter.OnItemClickListener,
         val pendingIntent =
             PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
 
-
-//        intent.data = Uri.parse(item.url)
-//        intent.putExtra("URLL","TEST")
-
-
-       /* val pendingIntent = PendingIntent.getBroadcast(this,
-            requestCode,
-            intent,
-            PendingIntent.FLAG_UPDATE_CURRENT)*/
-
-        // add menu item to overflow
         builder.addMenuItem(label, pendingIntent)
 
         builder.setShowTitle(true)
