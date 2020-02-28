@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/_8sdp"
+    android:background="@color/md_white_1000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgUrl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/news_headline" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/_85sdp"
+            android:background="@drawable/headline_content_gradient"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/md_white_1000"
+                android:text="@string/author"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_below="@id/tvAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:maxLines="2"
+                android:text="@string/news_title_goes_here"
+                android:textColor="@color/md_white_1000"
+                android:textSize="@dimen/_12ssp"/>
+
+            <TextView
+                android:id="@+id/tvSource"
+                android:layout_below="@id/tvTitle"
+                android:layout_width="wrap_content"
+                android:text="@string/source"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/md_white_1000"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_below="@id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
+                android:text="@string/date"
+                android:textSize="@dimen/_10ssp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="@color/md_white_1000"
+                android:layout_toEndOf="@id/tvSource"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

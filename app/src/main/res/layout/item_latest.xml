@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImg"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/imgNewsLatest"
+            android:layout_width="@dimen/_100sdp"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:id="@+id/tvNewsTitleLatest"
+        style="@style/LatestNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_toEndOf="@id/cardImg"
+        android:lines="2"
+        android:text=""
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/md_black_1000"
+        android:textSize="@dimen/_15ssp" />
+
+
+    <TextView
+        android:id="@+id/tvDateLatest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNewsTitleLatest"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text=""
+        android:layout_toEndOf="@id/cardImg"
+        android:textColor="@color/md_grey_500" />
+
+
+</RelativeLayout>

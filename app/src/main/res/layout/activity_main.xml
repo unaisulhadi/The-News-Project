@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:background="#F1F1F1"
+    android:orientation="vertical"
+    android:padding="@dimen/_8sdp"
+    tools:context=".activity.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/headlineTxt"
+            style="@style/AppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/headlines"
+            android:textColor="@color/md_black_1000" />
+
+        <ImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_search"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_165sdp"
+        android:layout_marginTop="@dimen/_4sdp" >
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_headlines"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_165sdp"
+            android:visibility="gone"/>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_headline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_165sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/md_grey_300"/>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <TextView
+            style="@style/AppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/latest"
+            android:textColor="@color/md_black_1000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_all"
+            style="@style/AppContent"
+            android:visibility="gone"
+            android:background="@drawable/btn_background"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shimmer_auto_start="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/item_latest_placeholder"/>
+                <include layout="@layout/item_latest_placeholder"/>
+                <include layout="@layout/item_latest_placeholder"/>
+                <include layout="@layout/item_latest_placeholder"/>
+                <include layout="@layout/item_latest_placeholder"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_latest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
